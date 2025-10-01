@@ -11,7 +11,7 @@ connectDB();
 // Middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: "https://votting-app.netlify.app", // frontend URL
     credentials: true,
   })
 );
@@ -28,3 +28,4 @@ app.use("/api/todos", require("./routes/todos"));
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
