@@ -22,7 +22,7 @@ app.use(express.json());
 // CORS setup (allow multiple frontend dev ports)
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // your frontend URLs
+    origin: ["https://votting-app.netlify.app", "http://localhost:5174"], // your frontend URLs
     credentials: true, // allow cookies/auth headers
   })
 );
@@ -47,3 +47,4 @@ app.use(errorHandler);
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
